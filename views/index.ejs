@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <style>
+    body{
+      text-align:center;
+    }
+
+    table{
+      margin:auto;
+      border-collapse:collapse;
+    }
+  </style>
+</head>
+
+<body background="clouds.png">
+
+<h1>DOggYz:)!</h1>
+
+<form action=/save method=post>
+  <table id="inputTable" border="1px" cellpadding="10">
+    <tr>
+      <th>Dog Name:</th>
+      <th>Fav Food:</th>
+      <th>Personality:</th>
+      <th>Add Dog!</th>
+    </tr>
+    <tr>
+      <td><input type="text" name="dogNameTextBox"></td>
+      <td><input type="text" name="dogFoodTextBox"></td>
+      <td><input type="text" name="dogPersonalityTextBox"></td>
+      <td><input type="submit"></td>
+    </tr>
+  </table>
+</form>
+
+<table id="dataTable" border="1px" width="900px" cellpadding="10">
+  <tr>
+    <th>Dog Name</th>
+    <th>Fav Food</th>
+    <th>Personality</th>
+    <th></th>
+  </tr>
+  <% for(var i=0; i<dogs.length; i++) {%>
+    <tr>
+      <td><a href="edit/<%= dogs[i].id %>"><%= dogs[i].dogName %></a></td>
+      <td><%= dogs[i].dogFood %></td>
+      <td><%= dogs[i].dogPersonality %></td>
+      <td><a href="delete/<%= dogs[i].id %>"><button type="button" id=deleteDogButton>Delete Dog</button></a></td>
+    </tr>
+  <% } %>
+</table>
+
+<img src="doggo3.png" height="300">
+
+</body>
+
+</html>

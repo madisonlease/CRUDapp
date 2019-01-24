@@ -1,0 +1,47 @@
+<html>
+
+<head>
+  <style>
+    body{
+      text-align:center;
+    }
+
+    table{
+      margin:auto;
+      border-collapse:collapse;
+    }
+  </style>
+</head>
+
+<body background="/marshmallows.png">
+
+<h1>EDit youR DoggO!</h1>
+
+<img src="/doggo1.png" height="300">
+
+<form action=/update method=post>
+
+  <input type="hidden" name="id" value="<%= dogDetails.id %>">
+
+  <table id="inputTable" border="1px" cellpadding="10">
+    <tr>
+      <th>Dog Name:</th>
+      <th>Fav Food:</th>
+      <th>Personality:</th>
+      <th>Update Dog!</th>
+    </tr>
+    <tr>
+      <td><input type="text" name="dogNameTextBoxEdit" value="<%=dogDetails.dogName%>"></td>
+      <td><input type="text" name="dogFoodTextBoxEdit" value="<%=dogDetails.dogFood%>"></td>
+      <td><input type="text" name="dogPersonalityTextBoxEdit" value="<%=dogDetails.dogPersonality%>"></td>
+      <td><input type="submit"></td>
+    </tr>
+  </table>
+
+</form>
+
+
+
+</body>
+
+</html>
